@@ -1,3 +1,36 @@
-<h1>
-  {{title}}
-</h1>
+<div (window:deviceorientation)="deviceOrientationHandler($event)" class="table">
+
+
+  <svg width="100" height="100" class="static">
+     <circle cx="50" cy="50" r="40" stroke="#444444" stroke-width="4" fill="transparent"/>
+  </svg>
+  <svg width="100" height="100" class="bubble" id="bubble">
+    <defs>
+    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="20%" fy="20%">
+      <stop offset="0%" style="stop-color:rgb(255,255,255);
+      stop-opacity:0" />
+      <stop offset="100%" style="stop-color:rgb(64,64,64);stop-opacity:1" />
+    </radialGradient>
+    <filter id="f2" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="3" dy="3" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>
+     <circle cx="50" cy="50" r="30" stroke-width="0" fill="transparent" fill="url(#grad1)"  filter="url(#f2)" />
+  </svg>
+  <div class="numbers">
+    <div class="number">
+      <div class="number-title">Alpha:</div>
+      <div class="number-value">{{alpha | number:'3.1-1'}}</div>
+    </div>
+    <div class="number">
+      <div class="number-title">Beta:</div>
+      <div class="number-value">{{beta| number:'3.1-1'}}</div>
+    </div>
+    <div class="number">
+      <div class="number-title">Gamma:</div>
+      <div class="number-value">{{gamma| number:'3.1-1'}}</div>
+    </div>
+  </div>
+</div>

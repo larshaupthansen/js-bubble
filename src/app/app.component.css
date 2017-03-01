@@ -1,0 +1,47 @@
+
+.table {
+    position:absolute;
+    width:100%;
+    left:0;
+    top:50px;
+    bottom:50px;
+    background-color:#cccccc;
+}
+.numbers {
+     background-color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color:white;
+    width:100%;
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+
+.number {
+    display:inline-block;
+    width: 30%;
+}
+
+.number-title {
+    font-weight:bold;
+    display: inline-block;
+}
+.number-value {
+    display: inline-block;
+}
+
+.static {
+    position:absolute;
+    left: 50%;
+    margin-left:-50px;
+    top:50%;
+    margin-top: -50px;
+}
+.bubble {
+    position:absolute;
+    left: 50%;
+    margin-left:-50px;
+    top:50%;
+    margin-top: -50px;
+}
